@@ -14,6 +14,12 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author Mack_TB
+ * @since 20/03/2024
+ * @version 1.0.2
+ */
+
 @RestController
 @RequestMapping("/api")
 public class QRCodeController {
