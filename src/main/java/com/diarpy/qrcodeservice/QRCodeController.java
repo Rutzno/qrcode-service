@@ -1,12 +1,13 @@
 package com.diarpy.qrcodeservice;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.ImageIO;
-import javax.print.attribute.standard.Media;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -17,14 +18,14 @@ import java.util.Set;
 /**
  * @author Mack_TB
  * @since 20/03/2024
- * @version 1.0.2
+ * @version 1.0.3
  */
 
 @RestController
 @RequestMapping("/api")
 public class QRCodeController {
-    final Set<String> SUPPORTED_TYPES = Set.of("png", "jpeg", "gif");
-    final Map<String, MediaType> MEDIATYPES = Map.of("png", MediaType.IMAGE_PNG,
+    private final Set<String> SUPPORTED_TYPES = Set.of("png", "jpeg", "gif");
+    private final Map<String, MediaType> MEDIATYPES = Map.of("png", MediaType.IMAGE_PNG,
             "jpeg", MediaType.IMAGE_JPEG,
             "gif", MediaType.IMAGE_GIF);
 
