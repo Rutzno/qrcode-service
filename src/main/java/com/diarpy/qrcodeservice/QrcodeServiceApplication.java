@@ -2,6 +2,11 @@ package com.diarpy.qrcodeservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.converter.BufferedImageHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
+
+import java.awt.image.BufferedImage;
 
 /**
  * @author Mack_TB
@@ -16,4 +21,8 @@ public class QrcodeServiceApplication {
 		SpringApplication.run(QrcodeServiceApplication.class, args);
 	}
 
+	@Bean
+	public HttpMessageConverter<BufferedImage> bufferedImageHttpMessageConverter() {
+		return new BufferedImageHttpMessageConverter();
+	}
 }
