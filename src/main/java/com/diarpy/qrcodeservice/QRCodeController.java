@@ -17,7 +17,7 @@ import java.io.IOException;
 /**
  * @author Mack_TB
  * @since 20/03/2024
- * @version 1.0.0
+ * @version 1.0.2
  */
 
 @RestController
