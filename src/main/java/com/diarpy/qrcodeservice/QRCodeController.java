@@ -17,16 +17,22 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author Mack_TB
+ * @since 20/03/2024
+ * @version 1.0.5
+ */
+
 @RestController
 @RequestMapping("/api")
 public class QRCodeController {
-    final Set<Character> SUPPORTED_CORRECTION_LEVELS = Set.of('L', 'M', 'Q', 'H');
-    final Map<Character, ErrorCorrectionLevel> CORRECTION_LEVELS = Map.of('L', ErrorCorrectionLevel.L,
+    private final Set<Character> SUPPORTED_CORRECTION_LEVELS = Set.of('L', 'M', 'Q', 'H');
+    private final Map<Character, ErrorCorrectionLevel> CORRECTION_LEVELS = Map.of('L', ErrorCorrectionLevel.L,
             'M', ErrorCorrectionLevel.M,
             'Q', ErrorCorrectionLevel.Q,
             'H', ErrorCorrectionLevel.H);
-    final Set<String> SUPPORTED_TYPES = Set.of("png", "jpeg", "gif");
-    final Map<String, MediaType> MEDIATYPES = Map.of("png", MediaType.IMAGE_PNG,
+    private final Set<String> SUPPORTED_TYPES = Set.of("png", "jpeg", "gif");
+    private final Map<String, MediaType> MEDIATYPES = Map.of("png", MediaType.IMAGE_PNG,
             "jpeg", MediaType.IMAGE_JPEG,
             "gif", MediaType.IMAGE_GIF);
 

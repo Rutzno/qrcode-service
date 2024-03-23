@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 /**
  * @author Mack_TB
  * @since 20/03/2024
- * @version 1.0.4
+ * @version 1.0.5
  */
 
 @SpringBootApplication
