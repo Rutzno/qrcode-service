@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author Mack_TB
+ * @since 20/03/2024
+ * @version 1.0.0
+ */
+
 @RestController
 @RequestMapping("/api")
 public class QRCodeController {
