@@ -24,8 +24,8 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api")
 public class QRCodeController {
-    final Set<String> SUPPORTED_TYPES = Set.of("png", "jpeg", "gif");
-    final Map<String, MediaType> MEDIATYPES = Map.of("png", MediaType.IMAGE_PNG,
+    private final Set<String> SUPPORTED_TYPES = Set.of("png", "jpeg", "gif");
+    private final Map<String, MediaType> MEDIATYPES = Map.of("png", MediaType.IMAGE_PNG,
             "jpeg", MediaType.IMAGE_JPEG,
             "gif", MediaType.IMAGE_GIF);
 
