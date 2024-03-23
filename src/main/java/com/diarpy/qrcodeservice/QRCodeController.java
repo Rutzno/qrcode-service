@@ -31,7 +31,6 @@ public class QRCodeController {
     }
 
     // used by clients to retrieve QR code images
-    // used by clients to retrieve QR code images
     @GetMapping("/qrcode")
     public ResponseEntity<byte[]> getImage() throws IOException {
         BufferedImage bufferedImage = new BufferedImage(250, 250, BufferedImage.TYPE_INT_RGB);
