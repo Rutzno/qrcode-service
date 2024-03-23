@@ -48,6 +48,10 @@ public class QRCodeController {
                                            @RequestParam(defaultValue = "250") int size,
                                            @RequestParam(defaultValue = "L") char correction,
                                            @RequestParam(defaultValue = "png") String type) throws IOException {
+        /**
+         * If a request contains multiple invalid parameters, the error messages should have the following priority:
+         * invalid contents > invalid size > invalid correction > invalid type
+         */
         if (contents.isBlank()) {
             return ResponseEntity.badRequest()
                     .body(Map.of("error", "Contents cannot be null or blank"));
